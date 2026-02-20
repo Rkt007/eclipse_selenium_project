@@ -2,6 +2,7 @@ package Allmethods;
 
 import java.io.File;
 
+
 import base.DriverFactory;
 import java.io.IOException;
 import java.time.Duration;
@@ -14,7 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Screenshot {
+public class ScreenshotTest {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub

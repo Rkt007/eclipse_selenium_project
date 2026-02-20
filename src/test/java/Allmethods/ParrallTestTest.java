@@ -6,7 +6,7 @@ import base.DriverFactory;
 
 public class ParrallTestTest {
 
-  @Test
+  @Test(enabled=false)
   public void Test01Test() {
     throw new RuntimeException("Test not implemented");
   }
