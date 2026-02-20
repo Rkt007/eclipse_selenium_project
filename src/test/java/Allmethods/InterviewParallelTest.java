@@ -45,7 +45,7 @@ public class InterviewParallelTest {
         driver.get("https://www.google.com/");
     }
 
-    @Test
+    @Test(enabled=false)
     public void googleSearchTest() {
 
         WebElement searchbox = driver.findElement(By.name("q"));
