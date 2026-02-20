@@ -1,13 +1,12 @@
 FROM maven:3.9.6-eclipse-temurin-17
 
-# Install Chrome
 RUN apt-get update && apt-get install -y \
     wget \
     curl \
     unzip \
     gnupg \
-    chromium \
-    chromium-driver \
+    chromium-browser \
+    chromium-chromedriver \
     fonts-liberation \
     libnss3 \
     libxss1 \
@@ -17,11 +16,12 @@ RUN apt-get update && apt-get install -y \
     --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
+ENV CHROME_BIN=/usr/bin/chromium-browser
+ENV CHROME_DRIVER=/usr/bin/chromedriver
+
 WORKDIR /app
 COPY . .
 
-# Build project
 RUN mvn clean install -DskipTests
 
-# Run tests
 CMD ["mvn", "test"]
