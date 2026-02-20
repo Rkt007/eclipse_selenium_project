@@ -1,33 +1,38 @@
 package Allmethods;
 
 import org.openqa.selenium.By;
-import base.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import base.DriverFactory;
 
-public class iFrameTest {
+public class IFrameTest {
 
-	public  void main () {
-		// TODO Auto-generated method stub
+    WebDriver driver;
 
-		WebDriverManager.chromedriver().setup();
+    @Test
+    public void frameCheckTest() {
 
-		//WebDriver Driver =new ChromeDriver();
-		WebDriver driver = DriverFactory.getDriver();
-		driver.get("https://www.rediff.com/");
-		
-//	switch to frame	
-		driver.switchTo().frame("moneyiframe");
-		
-//driver.findElement(By.id("bseindex")).click();
-		WebElement el = driver.findElement(By.xpath("//span[@id='bseindex']"));
-		el.click();
-		System.out.println(el.getText());
+        driver = DriverFactory.getDriver();
+        driver.get("https://www.rediff.com/");
 
-		driver.quit();
-	}
-	
-}
+        // Switch to iframe
+        driver.switchTo().frame("moneyiframe");
+
+        WebElement el = driver.findElement(By.id("bseindex"));
+        el.click();
+
+        System.out.println("BSE Value: " + el.getText());
+        
+       
+    }
+
+    
+//    @AfterMethod
+//    public void tearDown() {
+//        DriverFactory.quitriver();
+   
+    }
+    
