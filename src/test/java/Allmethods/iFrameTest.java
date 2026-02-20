@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import base.DriverFactory;
 
-public class IFrameTest {
+public class iFrameTest {
 
     WebDriver driver;
 
