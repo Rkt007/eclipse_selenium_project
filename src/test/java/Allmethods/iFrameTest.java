@@ -20,8 +20,8 @@ public class iFrameTest {
 
         // Switch to iframe
         driver.switchTo().frame("moneyiframe");
-
-        WebElement el = driver.findElement(By.id("bseindex"));
+  
+        WebElement el = driver.findElement(By.xpath("//span[@id ='bseindex']"));
         el.click();
 
         System.out.println("BSE Value: " + el.getText());
