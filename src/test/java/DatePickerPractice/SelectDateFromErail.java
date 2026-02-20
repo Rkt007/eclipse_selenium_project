@@ -2,6 +2,7 @@ package DatePickerPractice;
 
 import java.time.Duration;
 
+
 import base.DriverFactory;
 import java.util.List;
 
@@ -22,10 +23,13 @@ public class SelectDateFromErail {
     @BeforeClass
     public void setup() {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = DriverFactory.getDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(25));
         driver.manage().window().maximize();
-        driver.get("https://erail.in/");
+        driver.get("https://erail.in/"); 
+        
+        //WebDriver driver = new ChromeDriver();
+		
     }
 
     @Test
