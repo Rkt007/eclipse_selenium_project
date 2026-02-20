@@ -2,6 +2,8 @@ package Allmethods;
 
 import org.openqa.selenium.JavascriptExecutor;
 
+import base.DriverFactory;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -14,7 +16,8 @@ public class ScrollOnPage {
 
 WebDriverManager.chromedriver().setup();
 		
-		WebDriver driver = new ChromeDriver();
+//WebDriver driver = new ChromeDriver();
+WebDriver driver = DriverFactory.getDriver();
 		driver.get("https://int.zigzag.lk/");
 		System.out.println(driver.getTitle());
 

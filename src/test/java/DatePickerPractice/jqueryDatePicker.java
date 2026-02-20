@@ -2,6 +2,8 @@ package DatePickerPractice;
 
 import java.util.List;
 
+import base.DriverFactory;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +18,8 @@ public class jqueryDatePicker {
 	public void datepick() {
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 		driver.manage().window().maximize();
 		driver.get("https://jqueryui.com/datepicker/");
 		

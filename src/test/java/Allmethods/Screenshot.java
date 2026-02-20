@@ -1,6 +1,8 @@
 package Allmethods;
 
 import java.io.File;
+
+import base.DriverFactory;
 import java.io.IOException;
 import java.time.Duration;
 
@@ -19,8 +21,8 @@ public class Screenshot {
 
 		WebDriverManager.chromedriver().setup();
 
-		WebDriver driver = new ChromeDriver();
-
+		//WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://www.rediff.com/");

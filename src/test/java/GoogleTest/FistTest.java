@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import base.DriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FistTest {
@@ -13,7 +14,8 @@ public class FistTest {
 	//	   System.setProperty("webdriver.chrome.driver", "C:\\Users\\Saloni Tiwari\\OneDrive\\Desktop\\API Tester\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 	        WebDriverManager.chromedriver().setup();
 	        // Create an instance of ChromeDriver
-	        WebDriver driver = new ChromeDriver();
+//	   	 WebDriver driver = new ChromeDriver();
+	   	 WebDriver driver = DriverFactory.getDriver();
 	        
 	        // Open Google
 	        driver.get("https://www.google.com");

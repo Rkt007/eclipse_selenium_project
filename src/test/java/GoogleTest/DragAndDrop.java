@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import base.DriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DragAndDrop {
@@ -15,7 +16,8 @@ public class DragAndDrop {
 
 		
 		WebDriverManager.chromedriver().setup();
-		WebDriver Driver =new ChromeDriver();
+//		 WebDriver driver = new ChromeDriver();
+		 WebDriver Driver = DriverFactory.getDriver();
 		Driver.manage().window().maximize();
 		Driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
 		

@@ -1,6 +1,8 @@
 package today0506;
 
 import org.openqa.selenium.WebDriver;
+
+import base.DriverFactory;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -12,7 +14,8 @@ public class NavigationCommands {
 
 		WebDriverManager.chromedriver().setup();
 
-		WebDriver driver = new ChromeDriver();
+//		 WebDriver driver = new ChromeDriver();
+			 WebDriver driver = DriverFactory.getDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.google.com/");
 		driver.navigate().refresh();

@@ -1,5 +1,6 @@
 package Allmethods;
 
+import base.DriverFactory;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +14,8 @@ public class Alerts {
 
 		WebDriverManager.chromedriver().setup();
 		
-		WebDriver driver = new ChromeDriver();
+		//WebDriver Driver =new ChromeDriver();
+		WebDriver driver = DriverFactory.getDriver();
 		driver.get("https://www.rediff.com/");
 		System.out.println(driver.getTitle());
 

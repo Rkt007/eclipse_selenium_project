@@ -1,11 +1,14 @@
 package GoogleTest;
 
 import org.openqa.selenium.By;
+
+import base.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import base.DriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ToolTip {
@@ -16,7 +19,8 @@ public class ToolTip {
 		
 		
 		WebDriverManager.chromedriver().setup();
-		WebDriver Driver =new ChromeDriver();
+//		 WebDriver driver = new ChromeDriver();
+		 WebDriver Driver = DriverFactory.getDriver();
 		Driver.manage().window().maximize();
 		Driver.get("https://www.facebook.com/");
 		

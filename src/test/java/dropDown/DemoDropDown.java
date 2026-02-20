@@ -1,6 +1,8 @@
 package dropDown;
 
 import java.util.List;
+
+import base.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +19,8 @@ public class DemoDropDown {
    //     System.setProperty("webdriver.chrome.driver",
      //           "C:\\Users\\Saloni Tiwari\\OneDrive\\Desktop\\API Tester\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 
-        WebDriver driver = new ChromeDriver();
+    	//WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
         driver.get("https://demo.automationtesting.in/Register.html");
         driver.manage().window().maximize();
 

@@ -1,6 +1,8 @@
 package today0506;
 
 import org.openqa.selenium.By;
+
+import base.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -14,7 +16,8 @@ public class TryXpath {
 	
 WebDriverManager.chromedriver().setup();
 		
-		WebDriver driver = new ChromeDriver();
+//WebDriver driver = new ChromeDriver();
+	 WebDriver driver = DriverFactory.getDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.google.com/");
 		driver.findElement(By.xpath("//textarea[@id='APjFqb']")).sendKeys("selenium");

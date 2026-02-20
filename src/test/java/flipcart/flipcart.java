@@ -1,6 +1,8 @@
 package flipcart;
 
 import org.openqa.selenium.By;
+
+import base.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,7 +15,8 @@ public class flipcart {
 
 	WebDriverManager.chromedriver().setup();
 	
-	WebDriver driver = new ChromeDriver();
+//	 WebDriver driver = new ChromeDriver();
+	 WebDriver driver = DriverFactory.getDriver();
 	
 	driver.get("https://www.flipkart.com/");
 	driver.manage().window().maximize();

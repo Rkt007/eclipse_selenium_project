@@ -2,6 +2,8 @@ package practice;
 
 import java.time.Duration;
 
+import base.DriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +16,8 @@ public class FrameHandling {
     public static void main(String[] args) {
         // Setup WebDriver
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+//   	 WebDriver driver = new ChromeDriver();
+   		 WebDriver driver = DriverFactory.getDriver();
 
       
             // Launch URL and configure browser

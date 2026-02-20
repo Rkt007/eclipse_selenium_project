@@ -11,13 +11,16 @@ import org.testng.annotations.Test;
 
 import com.google.common.base.Stopwatch;
 
+import base.DriverFactory;
+
 public class implicitWait {
 
 	@Test
 	public void implicitWait() {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\Saloni Tiwari\\OneDrive\\Desktop\\\\API Tester\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+//		 WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://www.saucedemo.com/v1/");

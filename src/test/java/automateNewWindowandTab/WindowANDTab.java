@@ -1,6 +1,8 @@
 package automateNewWindowandTab;
 
 import java.time.Duration;
+
+import base.DriverFactory;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -19,7 +21,8 @@ public class WindowANDTab {
      //   System.setProperty("webdriver.chrome.driver",
     //            "C:\\Users\\Saloni Tiwari\\OneDrive\\Desktop\\API Tester\\chromedriver-win64\\chromedriver.exe");
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+    	//WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 
         // Launch Google
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import base.DriverFactory;
+
 public class scroll {
 	@Test
 	public void scrollonPage() 
@@ -14,7 +16,8 @@ public class scroll {
 		  System.setProperty("webdriver.chrome.driver",
 	                "C:\\Users\\Saloni Tiwari\\OneDrive\\Desktop\\API Tester\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");	
 		
-		  WebDriver driver =new ChromeDriver();
+//			 WebDriver driver = new ChromeDriver();
+			 WebDriver driver = DriverFactory.getDriver();
 		  driver.manage().window().maximize();
 		  driver.get("https://www.calculator.net/");
 		  JavascriptExecutor js = (JavascriptExecutor)driver;

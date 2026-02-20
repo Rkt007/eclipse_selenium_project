@@ -1,6 +1,8 @@
 package GoogleTest;
 
 import org.openqa.selenium.By;
+
+import base.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,7 +17,8 @@ public class MouseAction {
 	public void MouseAction()
 	{
 		WebDriverManager.chromedriver().setup();
-		WebDriver Driver =new ChromeDriver();
+//		 WebDriver driver = new ChromeDriver();
+		 WebDriver Driver = DriverFactory.getDriver();
 		Driver.manage().window().maximize();
 		Driver.get("https://gorest.co.in/");
 		

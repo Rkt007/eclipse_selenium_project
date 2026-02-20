@@ -1,6 +1,7 @@
 package business2sell;
 
 import java.time.Duration;
+import base.DriverFactory;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,11 +15,13 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DropDown {
 
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver =new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 
 		driver.get("https://www.business2sell.com.au/businesses?page=1");
 		driver.manage().window().maximize();

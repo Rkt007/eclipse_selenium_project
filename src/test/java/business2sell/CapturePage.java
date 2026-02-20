@@ -2,6 +2,8 @@ package business2sell;
 
 import java.io.File;
 
+import base.DriverFactory;
+
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
@@ -19,7 +21,8 @@ public class CapturePage {
 
 		
 		WebDriverManager.chromedriver().setup();
-		WebDriver Driver =new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
+		 WebDriver Driver = DriverFactory.getDriver();
 		
 		Driver.get("https://www.business2sell.com.au/businesses?page=1");
 		Driver.manage().window().maximize();

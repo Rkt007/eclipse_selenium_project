@@ -1,6 +1,8 @@
 package dropDown;
 
 import java.time.Duration;
+
+import base.DriverFactory;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -20,7 +22,8 @@ public class WithoutUsingSelect {
 
 		WebDriverManager.chromedriver().setup();
 
-		WebDriver Driver = new ChromeDriver();
+//		 WebDriver driver = new ChromeDriver();
+		 WebDriver Driver = DriverFactory.getDriver();
 
 		Driver.manage().window().maximize();
 		Driver.get("https://demo.automationtesting.in/Register.html");

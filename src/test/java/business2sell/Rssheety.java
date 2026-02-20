@@ -2,6 +2,8 @@ package business2sell;
 
 import java.time.Duration;
 
+import base.DriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +17,8 @@ public class Rssheety {
         
         // Setup ChromeDriver
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+      //WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
         
         try {
             driver.manage().window().maximize();

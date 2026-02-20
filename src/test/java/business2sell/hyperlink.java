@@ -2,12 +2,15 @@ package business2sell;
 
 import java.util.List;
 
+import base.DriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class hyperlink {
 
@@ -18,7 +21,8 @@ public class hyperlink {
 		
 		WebDriverManager.chromedriver().setup();
 		
-		WebDriver driver = new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.calculator.net/");
 		

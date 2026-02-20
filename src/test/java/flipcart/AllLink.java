@@ -1,6 +1,8 @@
 package flipcart;
 
 import java.time.Duration;
+
+import base.DriverFactory;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -16,7 +18,8 @@ public class AllLink {
 		// TODO Auto-generated method stub
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+//		 WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		

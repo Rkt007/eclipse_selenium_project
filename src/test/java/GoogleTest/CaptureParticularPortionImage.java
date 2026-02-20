@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import base.DriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CaptureParticularPortionImage {
@@ -21,7 +22,8 @@ public class CaptureParticularPortionImage {
 	{
 //System.setProperty("webdriver.chrome.driver", "C:\\Users\\Saloni Tiwari\\OneDrive\\Desktop\\\\API Tester\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 WebDriverManager.chromedriver().setup();
-WebDriver driver =new ChromeDriver();
+//WebDriver driver = new ChromeDriver();
+WebDriver driver = DriverFactory.getDriver();
 
 driver.manage().window().maximize();
 driver.get("https://translate.google.com/?sl=hi&tl=en&op=translate");

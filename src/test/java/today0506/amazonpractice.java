@@ -2,6 +2,8 @@ package today0506;
 
 import java.time.Duration;
 
+import base.DriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +19,8 @@ public class amazonpractice {
 
 	WebDriverManager.chromedriver().setup();
 	
-	WebDriver driver = new ChromeDriver();
+//	 WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 	
 	driver.get("https://www.amazon.in/");
 	driver.manage().window().maximize();

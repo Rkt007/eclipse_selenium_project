@@ -1,6 +1,8 @@
 package today0506;
 
 import java.util.List;
+
+import base.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +18,8 @@ public class ExplicitWait {
     public static void main(String[] args) {
 
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+//   	 WebDriver driver = new ChromeDriver();
+   		 WebDriver driver = DriverFactory.getDriver();
         driver.manage().window().maximize();
         driver.get("https://demo.automationtesting.in/Register.html");
 

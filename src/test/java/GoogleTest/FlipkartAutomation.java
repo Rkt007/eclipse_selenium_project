@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import base.DriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.time.Duration;
@@ -21,7 +22,8 @@ public class FlipkartAutomation {
       choose the 2nd mobile
       get text of the price
       add to cart and verify price before and after  */
-        WebDriver driver = new ChromeDriver();
+// 	 WebDriver driver = new ChromeDriver();
+ 	 WebDriver driver = DriverFactory.getDriver();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         driver.manage().window().maximize();

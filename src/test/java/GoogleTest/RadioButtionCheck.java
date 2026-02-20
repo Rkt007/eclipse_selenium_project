@@ -7,13 +7,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import base.DriverFactory;
+
 public class RadioButtionCheck {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\Saloni Tiwari\\\\OneDrive\\\\Desktop\\\\API Tester\\\\chromedriver-win64\\\\chromedriver-win64\\\\chromedriver.exe");
 		
-		WebDriver driver =new ChromeDriver();
+//		 WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 		
 		driver.manage().window().maximize();
 		

@@ -10,12 +10,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+import base.DriverFactory;
 public class isSelected {
 
 	public static void main(String[] args) {
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 
 		driver.get("https://demo.automationtesting.in/Register.html");
 		driver.manage().window().maximize();

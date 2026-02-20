@@ -1,6 +1,8 @@
 package DatePickerPractice;
 
 import java.util.List;
+
+import base.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +14,8 @@ public class DatePickerByDropDown {
 
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+      //WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 
         driver.get("https://www.dummyticket.com/dummy-ticket-for-visa-application/");
         driver.manage().window().maximize();

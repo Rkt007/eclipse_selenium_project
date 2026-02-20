@@ -1,6 +1,8 @@
 package dropDown;
 
 import java.time.Duration;
+
+import base.DriverFactory;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -19,7 +21,8 @@ public class AmazonDropDown {
 
 WebDriverManager.chromedriver().setup();
 
-WebDriver driver = new ChromeDriver();
+//WebDriver driver = new ChromeDriver();
+WebDriver driver = DriverFactory.getDriver();
 driver.manage().window().maximize();
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 

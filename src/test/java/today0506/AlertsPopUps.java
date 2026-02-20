@@ -1,6 +1,8 @@
 package today0506;
 
 import org.openqa.selenium.Alert;
+
+import base.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +13,8 @@ public class AlertsPopUps {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         
-        WebDriver driver = new ChromeDriver();
+//   	 WebDriver driver = new ChromeDriver();
+   		 WebDriver driver = DriverFactory.getDriver();
         driver.manage().window().maximize();
         
         driver.get("https://demo.automationtesting.in/Alerts.html");

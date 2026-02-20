@@ -2,6 +2,8 @@ package dropDown;
 
 import java.util.List;
 
+import base.DriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +18,8 @@ public class dropdown2 {
 		// TODO Auto-generated method stub
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 
 		driver.get("https://demo.automationtesting.in/Register.html");
 		driver.manage().window().maximize();

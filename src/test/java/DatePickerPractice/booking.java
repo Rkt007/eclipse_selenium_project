@@ -2,6 +2,8 @@ package DatePickerPractice;
 
 import java.time.Duration;
 
+import base.DriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +20,8 @@ public class booking {
         // -------- Setup --------
 
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+      //WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

@@ -1,6 +1,8 @@
 package DatePickerPractice;
 
 import java.time.Duration;
+
+import base.DriverFactory;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -15,7 +17,8 @@ public class PaytmDatePicker3 {
     public static void main(String[] args) {
 
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+      //WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         // Open URL

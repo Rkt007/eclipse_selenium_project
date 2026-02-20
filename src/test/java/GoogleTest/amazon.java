@@ -2,12 +2,15 @@ package GoogleTest;
 
 import java.util.List;
 
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import base.DriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class amazon {
@@ -16,7 +19,8 @@ public class amazon {
 		// TODO Auto-generated method stub
 
  WebDriverManager.chromedriver().setup();
- WebDriver driver = new ChromeDriver();
+// WebDriver driver = new ChromeDriver();
+ WebDriver driver = DriverFactory.getDriver();
  driver.get("https://www.amazon.in/");	
  
  String expecteditem ="Apple iPhone 17 (256 GB) - Pink";
@@ -39,7 +43,7 @@ List <WebElement> All= driver.findElements(By.xpath("//div[@class='a-section a-s
 		Addtocart.click();
 	}
 
-	
+
 
 	}
 

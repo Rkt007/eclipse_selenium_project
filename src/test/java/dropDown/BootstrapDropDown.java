@@ -1,6 +1,8 @@
 package dropDown;
 
 import java.time.Duration;
+
+import base.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +15,8 @@ public class BootstrapDropDown {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
 
-        WebDriver driver = new ChromeDriver();
+      //WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 

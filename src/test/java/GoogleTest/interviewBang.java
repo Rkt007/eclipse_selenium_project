@@ -2,6 +2,8 @@ package GoogleTest;
 
 import java.time.Duration;
 
+import base.DriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +16,8 @@ public class interviewBang {
 
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+//   	 WebDriver driver = new ChromeDriver();
+   	 WebDriver driver = DriverFactory.getDriver();
 
         driver.get("http://www.automationpractice.pl/index.php");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

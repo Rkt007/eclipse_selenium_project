@@ -2,6 +2,8 @@ package HTMLWebPage;
 
 import java.util.List;
 
+import base.DriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,8 +15,10 @@ public class ValidateCell {
 	@Test
 	public void columnValidate()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\Saloni Tiwari\\\\OneDrive\\\\Desktop\\\\API Tester\\\\chromedriver-win64\\\\chromedriver-win64\\\\chromedriver.exe");
-		WebDriver Driver= new ChromeDriver();
+//		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\Saloni Tiwari\\\\OneDrive\\\\Desktop\\\\API Tester\\\\chromedriver-win64\\\\chromedriver-win64\\\\chromedriver.exe");
+//		 WebDriver driver = new ChromeDriver();
+			 WebDriver Driver = DriverFactory.getDriver();
+		
 		Driver.get("file:///C:/Users/Saloni%20Tiwari/OneDrive/Desktop/sampleHTML.html");
 		
 	//	find second cell in web table and print 

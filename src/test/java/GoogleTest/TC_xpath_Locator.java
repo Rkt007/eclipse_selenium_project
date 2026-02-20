@@ -3,6 +3,8 @@ package GoogleTest;
 
 import java.util.List;
 
+import base.DriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,13 +13,16 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import base.DriverFactory;
+
 public class TC_xpath_Locator {
 	
 	@Test
 	public void Locator()
 	{
-	System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\Saloni Tiwari\\\\OneDrive\\\\Desktop\\\\API Tester\\\\chromedriver-win64\\\\chromedriver-win64\\\\chromedriver.exe");
-WebDriver driver= new ChromeDriver();
+//	System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\Saloni Tiwari\\\\OneDrive\\\\Desktop\\\\API Tester\\\\chromedriver-win64\\\\chromedriver-win64\\\\chromedriver.exe");
+//	 WebDriver driver = new ChromeDriver();
+	 WebDriver driver = DriverFactory.getDriver();
 
 driver.get("https://timesheet.altametrics.com/timesheet/jsf/security/login.jsp");
 

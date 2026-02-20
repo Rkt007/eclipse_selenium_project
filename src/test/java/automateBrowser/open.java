@@ -1,6 +1,8 @@
 package automateBrowser;
 
 import org.openqa.selenium.By;
+
+import base.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -14,8 +16,8 @@ public class open {
         WebDriverManager.chromedriver().setup();
 
         // Launch the Chrome browser
-        WebDriver driver = new ChromeDriver();
-
+    	//WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
         // Maximize the browser window
         driver.manage().window().maximize();
 

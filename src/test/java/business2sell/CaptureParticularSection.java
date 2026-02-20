@@ -13,12 +13,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+import base.DriverFactory;
 public class CaptureParticularSection {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+      //WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 
         driver.get("https://www.business2sell.com.au/businesses?page=1");
         driver.manage().window().maximize();

@@ -13,11 +13,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import base.DriverFactory;
+
 public class erail {
 
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+//   	 WebDriver driver = new ChromeDriver();
+   	 WebDriver driver = DriverFactory.getDriver();
 
         try {
             driver.manage().window().maximize();

@@ -1,6 +1,8 @@
 package practice;
 
 import org.openqa.selenium.WebDriver;
+
+import base.DriverFactory;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -11,7 +13,8 @@ public class LaunchBrowser {
 		// TODO Auto-generated method stub
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver=new ChromeDriver();
+//		 WebDriver driver = new ChromeDriver();
+			 WebDriver driver = DriverFactory.getDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.google.com/");  //  open browser
 	System.out.println("Title of web page:"+ driver.getTitle());     // title of page

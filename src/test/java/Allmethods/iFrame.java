@@ -1,6 +1,7 @@
 package Allmethods;
 
 import org.openqa.selenium.By;
+import base.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +15,8 @@ public class iFrame {
 
 		WebDriverManager.chromedriver().setup();
 
-		WebDriver driver = new ChromeDriver();
+		//WebDriver Driver =new ChromeDriver();
+		WebDriver driver = DriverFactory.getDriver();
 		driver.get("https://www.rediff.com/");
 		
 //	switch to frame	

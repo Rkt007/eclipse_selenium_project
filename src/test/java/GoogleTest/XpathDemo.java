@@ -1,10 +1,13 @@
 package GoogleTest;
 
 import org.openqa.selenium.By;
+
+import base.DriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import base.DriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class XpathDemo {
@@ -15,7 +18,8 @@ public class XpathDemo {
 	
 //	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Saloni Tiwari\\OneDrive\\Desktop\\API Tester\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 	WebDriverManager.chromedriver().setup();
-	WebDriver driver =new ChromeDriver();
+//	 WebDriver driver = new ChromeDriver();
+	 WebDriver driver = DriverFactory.getDriver();
 	driver.get("https://www.saucedemo.com");
 	
 	driver.findElement(By.xpath("//input[@id='user-name']")).sendKeys("standard_user");

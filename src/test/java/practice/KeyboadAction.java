@@ -2,6 +2,8 @@ package practice;
 
 import java.time.Duration;
 
+import base.DriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +19,8 @@ public class KeyboadAction {
 		// TODO Auto-generated method stub
 
 		 WebDriverManager.chromedriver().setup();
-	        WebDriver driver = new ChromeDriver();
+//		 WebDriver driver = new ChromeDriver();
+			 WebDriver driver = DriverFactory.getDriver();
 
 	     
 	            // Set up explicit wait

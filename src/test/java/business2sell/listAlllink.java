@@ -2,6 +2,10 @@ package business2sell;
 
 import java.util.List;
 
+import base.DriverFactory;
+
+import base.DriverFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +18,8 @@ public class listAlllink {
 	public static void main(String[] args) {
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver =new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
+		 WebDriver driver = DriverFactory.getDriver();
 // List of all link 
 		driver.get("https://www.business2sell.com.au/businesses?page=1");
 		driver.manage().window().maximize();

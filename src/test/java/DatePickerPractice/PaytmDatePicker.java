@@ -1,6 +1,7 @@
 package DatePickerPractice;
 
 import java.util.List;
+import base.DriverFactory;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,8 @@ public class PaytmDatePicker {
 		// TODO Auto-generated method stub
 
 		  WebDriverManager.chromedriver().setup();
-	        WebDriver driver = new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
+			 WebDriver driver = DriverFactory.getDriver();
 
 	        // Open URL
 	        driver.get("https://paytm.com/");

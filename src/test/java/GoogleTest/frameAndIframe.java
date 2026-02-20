@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import base.DriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class frameAndIframe {
@@ -14,7 +15,8 @@ public class frameAndIframe {
 	//	concept of frameAndIframe
 		
 WebDriverManager.chromedriver().setup();
-WebDriver driver=new ChromeDriver();
+//WebDriver driver = new ChromeDriver();
+WebDriver driver = DriverFactory.getDriver();
 driver.get("https://www.rediff.com");
 
 //find element of iframe and frame
