@@ -8,9 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class iFrameTestTest {
+public class iFrameTest {
 
-	public static void main(String[] args) {
+	public  void main () {
 		// TODO Auto-generated method stub
 
 		WebDriverManager.chromedriver().setup();

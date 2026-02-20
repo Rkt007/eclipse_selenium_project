@@ -6,10 +6,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DatabaseConnectionCheckTest {
+import org.testng.annotations.Test;
 
-	public static void main(String[] args) throws SQLException {
-		// TODO Auto-generated method stub
+public class DatabaseConnectionCheck {
+	
+	@Test
+	public void ConnectionCheck() throws SQLException {
+
 
 Connection connection =	DriverManager.getConnection("jdbc:mysql://localhost:8080", "root", "password");
 	
